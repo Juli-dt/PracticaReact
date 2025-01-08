@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+Introducción
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esta actividad práctica construirás un app de React de Filtrado de listas o elementos, la app tendrá una lista de cualquier tipo de elementos, por ejemplo: películas, tareas, nombres, canciones, etc. Y tendrá un input para que al escribir alguna palabra se filtren solo los elementos que coincidan con el texto ingresado.
 
-## Available Scripts
+La app tiene que contar con las siguientes características:
 
-In the project directory, you can run:
+Crear el proyecto con create-react-app
+Usar componentes funcionales y hooks
+Usar los conceptos aprendidos en las clases de forms, listas y keys
+Los componentes tendrán que ser estilizados y los conceptos de CSS aplicados correctamente
+Contemplar los conceptos de HTML semántico
+Crear un repositorio de GitHub con los archivos del app, recuerda que NO debemos de subir la carpeta de node_modules
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Antes de comenzar
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Asegúrate de tener instalado Node.js en tu sistema, asimismo, crea un nuevo proyecto de React para esta práctica, no uses el mismo que se trabajó en clase.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+Paso a paso
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A continuación se mencionan los pasos a seguir para el desarrollo de la app:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Crear el componente de App.js: Este será el componente principal que contendrá y organizará otros componentes. Debería tener un estado para almacenar la lista de elementos y el texto de búsqueda.
+Crear el componente de FilteredList.js: Este componente será responsable de mostrar la lista filtrada de elementos. Aceptará la lista de elementos y el texto de búsqueda como props y luego filtrará los elementos que coincidan con el texto de búsqueda.
+Crear el componente de SearchBox.js: Este componente será responsable de manejar la entrada del usuario. Aceptaría una función de actualización como prop, que se llamará cuando el texto del cuadro de búsqueda cambie.
+Implementar la lógica de filtrado: En el componente FilteredList, filtra la lista de elementos proporcionada comparando el texto de búsqueda con cada elemento. Puedes usar el método
+Renderizar la lista filtrada: En el componente FilteredList, itera sobre la lista filtrada de elementos y crea una lista ordenada (usando etiquetas <ul> y <li> o similar) para mostrar los elementos
+Manejar el input o entrada del usuario: En el componente SearchBox, crea un cuadro de entrada (usando la etiqueta <input> o similar) y maneja el evento onChange para actualizar el texto de búsqueda en el componente App
+Integrar los componentes: En el componente App, importa e integra los componentes FilteredList y SearchBox. Pasa la lista de elementos y el texto de búsqueda como props al componente FilteredList y la función de actualización al componente SearchBox
